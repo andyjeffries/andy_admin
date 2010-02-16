@@ -114,6 +114,8 @@ If you prefer to use Rails' built in form generation (and let's be honest, who d
     <%= f.cancel "Cancel", "/" %>
   <% end %></code></pre>
 
+The title is the h2 tag used to title the input, the description is the hint text that appears above the input and the label is used after checkboxes.  It automatically handles displaying of errors.
+
 h2. Sidebar
 
 To use the sidebar, simply define content for :sidebar and use h2 tags for the headings.  For example:
