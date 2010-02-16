@@ -1,0 +1,90 @@
+h2. Usage:
+
+To add this admin layout to your application is easy:
+
+script/generate andy_admin "My Site Name"
+
+h2. Header/Page Titles
+
+You should try to set the instance variable @page_title within your controller as the section of the site you're using, or maybe any section heading.  This is displayed in the main title tag and in the header bar.
+
+h2. Navigation
+
+The navigation tabs are simply declared as ul#navigation and ul#subnavigation within the div#header element.  If they have a class of active they will be displayed as seamless to the page (to show the current tab).  For example:
+
+<pre><code>  <ul id='navigation'>
+    <li class='active'><a href='#'>Type 1</a></li>
+    <li><a href='#'>Type 2</a></li>
+    <li><a href='#'>Type 3</a></li>
+  </ul>
+  <ul id='subnavigation'>
+    <li><a href='#'>Type 3</a></li>
+    <li><a href='#'>Type 3</a></li>
+  </ul></code></pre>
+
+For the moment, there's no automated handling of determining the current tab, but this is planned.
+
+h2. Main Content Area
+
+The main content area is simply the main part of the Rails view.  You can display the heading for the page in an h1 tag.  If there are actions to take (New links, etc) you can put them in a span within the h1.
+
+For example:
+
+<pre><code>  <h1>
+    Overview 
+    <span><a href='#'>Add new</a> | <a href='#'>Search</a></span>
+  </h1></pre></code>
+
+If you're listing items, the easiest way is to follow 37 Signal's example and break them out by date using div.date_breakout, for example:
+
+<pre><code>  <div class='date_breakout'>Friday, 12 July 2009</div></code></pre>
+
+Then each item is in a div.item.  An optional div.summary is available for sending less important information to the right:
+
+<pre><code>  <div class='item'>
+    <div class='summary'>
+      Edited by <strong>Andy J.</strong>
+    </div>
+    <a href='#'>Test item</a>
+  </div></code></pre>
+
+h2. Forms
+
+The general structure is to use h2 for field labels.  If there is an error you can immediately follow it with a span.error to display the error message continued on the same line.
+
+Then there can be an optional div.description for any helpful hints/descriptive text.
+
+Finally there should be the actual input(s) within a div.input.  The div.input can contain labels which are displayed inline (for checkboxes, for example).
+
+For example:
+
+<pre><code>  <h2>Your name</h2>
+  <span class='error'>can't be blank</span>
+  <div class='description'>
+    Your name appears at the top of each invoice
+  </div>
+  <div class='input'>
+    <input type='text'>
+  </div></pre></code>
+
+The actions buttons should be within a div.actions at the bottom of the form and can be normal links, links with a class of awesome ("Yes, it uses 'Awesome Buttons'":http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba) or buttons.
+
+For example:
+
+<pre><code>  <div class='actions'>
+    <button class='awesome green' type='submit'>Save</button>
+    <a href='#foo' class='awesome red'>Delete</a>
+    or <a href='#'>Cancel</a>
+  </div></pre></code>
+
+For the moment there's no easy way of generating these forms, but a custom FormBuilder is planned.
+
+h2. Sidebar
+
+To use the sidebar, simply define content for :sidebar and use h2 tags for the headings.  For example:
+
+<pre><code>  <% content_for :sidebar do %>
+  	<h2>Should we delete it?</h2>
+  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  	<p><a href='#'>I understand - delete</a></p>
+  <% end %></pre></code>
