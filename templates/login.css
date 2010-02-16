@@ -22,7 +22,8 @@ a:hover {
 /* ***************** FLASH DEFINITIONS ***************** */
 
 div.flash_error, div.flash_notice, div.flash_warning {
-	margin: 20px;
+	margin: -20px -20px 20px -20px;
+	margin: 0px 0px 20px 0px;
 	padding: 10px;
 	color: white;
 	font-weight: bold;
@@ -39,12 +40,6 @@ div.flash_notice {
 div.flash_warning {
 	color: black;
 	background: #e8ed2d;
-}
-
-div.flash_error span, div.flash_notice span, div.flash_warning span {
-	float: right;
-	font-size: 80%;
-	cursor: pointer;
 }
 
 /* ***************** AWESOME BUTTONS ***************** */
@@ -91,116 +86,11 @@ a.awesome:hover {
 	text-decoration: none;
 }
 
-/* ***************** HEADER ***************** */
+/* ***************** LOGIN FORM ***************** */
 
-div#header {
-	background-color: #31580f;
-	height: 92px;
-	padding: 2px 2px 0px 2px;
-	position: relative;
-	text-align: left;
-}
-
-div#header h1 {
-	font-size: 18pt;
-	color: white;
-	font-weight: bold;
-	padding-top: 18px;
-	margin-left: 20px;
-}
-
-div#header h1 span {
-	color: #d8eefd;
-	font-size: 80%;
-}
-
-/* ***************** MAIN NAVIGATION ***************** */
-
-div#header ul#navigation {
-	margin: 0px;
-	padding: 0px;
-	position: absolute;
-	bottom: 0px;
-	left: 20px;
-}
-
-div#header ul#navigation li {
-	display: inline-block;
-	background-color: #427418;
-}
-
-div#header ul#navigation li a {
-	text-decoration: none;
-	display: inline-block;
-	padding: 4px;
-	color: #d8eefd;
-	font-weight: bold;
-}
-
-div#header ul#navigation li.active a, div#header ul#navigation li a:hover {
-	background: #e5e5e5;
-	background: -webkit-gradient(linear, top left, bottom right, from(#fdfdfd), to(#e5e5e5));
-	background: -moz-linear-gradient(top left, #fdfdfd, #e5e5e5);
-	color: black;
-}
-
-/* ***************** SUB NAVIGATION ***************** */
-
-div#header ul#subnavigation {
-	margin: 0px;
-	padding: 0px;
-	position: absolute;
-	bottom: 0px;
-	right: 20px;
-}
-
-div#header ul#subnavigation li {
-	display: inline-block;
-	background-color: #427418;
-}
-
-div#header ul#subnavigation li a {
-	text-decoration: none;
-	display: inline-block;
-	padding: 3px;
-	color: #d8eefd;
-	font-weight: bold;
-	font-size: 95%;
-}
-
-div#header ul#subnavigation li.active a, div#header ul#subnavigation li a:hover {
-	background: #e5e5e5;
-	background: -webkit-gradient(linear, top left, bottom right, from(#fdfdfd), to(#e5e5e5));
-	background: -moz-linear-gradient(top left, #fdfdfd, #e5e5e5);
-	color: black;
-}
-
-/* ***************** SIDEBAR ***************** */
-
-div#sidebar {
-	float: right;
-	width: 360px;
-	margin: 20px;
-}
-
-div#sidebar h2 {
-	background-color: #eff4fd;
-	padding: 8px;
-	color: black;
-	font-weight: bold;
-	margin-bottom: 10px;
-}
-
-div#sidebar p {
-	padding: 8px 8px 0px 8px;
-	color: black;
-}
-
-/* ***************** CONTENT ***************** */
-
-div#content {
-	margin: 20px;
-	margin-right: 400px;
+div#login {
+	width: 250px;
+	margin: 100px auto 50px auto;
 	background: white;
 	padding: 20px;
 	box-shadow: 5px 5px 5px #888;
@@ -208,7 +98,7 @@ div#content {
 	-webkit-box-shadow: 5px 5px 5px #888;
 }
 
-div#content h1 {
+div#login h1 {
 	margin: -20px -20px 20px -20px;
 	background: #eff4fd;
 	padding: 10px 20px;
@@ -217,45 +107,6 @@ div#content h1 {
 	color: black;
 	position: relative;
 }
-
-div#content h1 span {
-	position: absolute;
-	right: 20px;
-	top: 13px;
-	font-size: 80%;
-	font-weight: normal;
-	color: #d0d8eb;
-}
-
-div.date_breakout {
-	margin-left: -20px;
-	padding-left: 20px;
-	color: #666666;
-	border-bottom: 1px solid #cccccc;
-	width: 150px;
-	text-transform: uppercase;
-	font-size: 8px;
-	font-weight: bold;
-	margin-bottom: 4px;
-	margin-top: 20px;
-}
-
-div.item {
-	border-bottom: 1px solid #efefef;
-	padding: 6px 0px;
-}
-
-div.summary {
-	float: right;
-	color: #999;
-	font-size: 80%;
-}
-
-div.summary strong {
-	color: #000;
-	font-size: 100%;
-}
-
 
 /* ***************** FORM ELEMENTS ***************** */
 
@@ -275,8 +126,6 @@ form div.description {
 }
 
 form div.input {
-	background-color: #f0f0f0;
-	padding: 6px;
 	margin-bottom: 10px;
 }
 
@@ -297,4 +146,5 @@ form div.actions {
 div#footer {
 	margin: 20px;
 	color: #aaa;
+	text-align: center;
 }

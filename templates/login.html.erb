@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>Login : <%= admin_name %></title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css">
+		<%%= javascript_include_tag 'login' %>
+		<%%= stylesheet_link_tag 'login' %>
+	</head>
+	<body>
+		<div id="login">
+			<h1><%= admin_name %></h1>
+			<%%= content_tag(:div, flash[:notice], :class => "flash_notice") if flash[:notice] %>
+			<%%= content_tag(:div, flash[:error], :class => "flash_error") if flash[:error] %>
+			<%%= content_tag(:div, flash[:warning], :class => "flash_warning") if flash[:warning] %>
+			<div id='content'>
+				<!-- Extract from here to the yield to a view -->
+				<form action='/login' method='post'>
+					<h2>User name</h2>
+				  <div class='input'>
+				    <input type='text' name='user_name' />
+				  </div>
+					<h2>Password</h2>
+				  <div class='input'>
+				    <input type='password' name='password' />
+				  </div>
+				  <div class='input'>
+				    <input type='checkbox' name='remember_me' id='remember_me' /> <label for="remember_me">Remember me on this computer</label>
+				  </div>
+					
+					<div class='actions'>
+  			    <button class='awesome green' type='login'>Login</button>
+				  </div>
+				</form>
+				<%%#= yield %>
+			</div>
+		</div>
+		<div id='footer'>
+			Designed and developed by Your Name. Copyright &copy; <%%= Time.now.year %>, all rights reserved.
+		</div>
+	</body>
+</html>

@@ -1,8 +1,22 @@
-h2. Usage:
+h2. About
+
+37 Signals have done a brilliant job making great GUIs and I often want to have a similar nice interface for internal projects, so here is a simple admin layout generator to give you a GUI in that style.  I haven't copied the markup or code in any way from 37 Signals, but the look is obviously inspired by them.
+
+h2. Usage
 
 To add this admin layout to your application is easy:
 
 script/generate andy_admin "My Site Name"
+
+This will create the admin and login layouts, all javascript/css files and copy in any necessary images.
+
+h2. Login Layout
+
+The login layout (login.html.erb) is really a layout and view in one, the first step will need to be extracting the form within the layout in to a view and making the yield call uncommented.  Then you can use it for a login form.
+
+h2. Flash Messages
+
+Saving text in flash[:error], flash[:notice] or flash[:warning] will give it the appropriate display in the templates (either login or the main admin template)
 
 h2. Header/Page Titles
 
@@ -95,5 +109,3 @@ h2. To Do List
 
 * Create a custom FormBuilder (AndyAdmin::FormBuilder)
 * Navigation class for handling the current Tab (AndyAdmin::Navigation)
-* Create a login layout too
-* Flash error/notice/warning displays in layouts (admin and login)

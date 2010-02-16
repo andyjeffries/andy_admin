@@ -12,6 +12,9 @@ class AndyAdminGenerator < Rails::Generator::Base
       m.file "admin.css", "public/stylesheets/admin.css"
       m.file "alert-overlay.png", "public/images/admin-alert-overlay.png"
       m.file "admin.js", "public/javascripts/admin.js"
+      m.template "login.html.erb", "app/views/layouts/login.html.erb"
+      m.file "login.css", "public/stylesheets/login.css"
+      m.file "login.js", "public/javascripts/login.js"
     end
   end
 end
