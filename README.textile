@@ -4,6 +4,10 @@ h2. About
 
 h2. Usage
 
+First you need to clone this repository to your ~/.rails/generators folder like this:
+
+git clone git://github.com/andyjeffries/andy_admin.git ~/.rails/generators/andy_admin
+
 To add this admin layout to your application is easy:
 
 script/generate andy_admin "My Site Name"
