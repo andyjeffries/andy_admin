@@ -10,9 +10,9 @@ git clone git://github.com/andyjeffries/andy_admin.git ~/.rails/generators/andy_
 
 To add this admin layout to your application is easy:
 
-script/generate andy_admin "My Site Name"
+script/generate andy_admin "My Site Name" 232
 
-This will create the admin and login layouts, all javascript/css files and copy in any necessary images.
+This will create the admin and login layouts, all javascript/css files and copy in any necessary images and using a hue of 232 degrees (with the saturation and lightness values automatically calculated).
 
 h2. Login Layout
 

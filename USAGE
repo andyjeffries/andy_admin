@@ -3,8 +3,9 @@ Description:
     with decent looking forms using a custom form builder
     
 Usage:
-    If you do not pass any arguments, the site name will default to "Your Site"
+    If you do not pass any arguments, the site name will default to "Your Site" and the Hue of the header bar/links will default to 92 degrees
 
 Examples:
     script/generate andy_admin
     script/generate andy_admin "My Site Name"
+    script/generate andy_admin "My Site Name" 232

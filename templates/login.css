@@ -11,7 +11,7 @@ html, body {
 }
 
 a {
-	color: #0849c6;
+	color: <%= light_colour %>;
 	text-decoration: none;
 }
 
@@ -103,7 +103,7 @@ div#login {
 
 div#login h1 {
 	margin: -20px -20px 20px -20px;
-	background: #eff4fd;
+	background: <%= highlight_colour %>;
 	padding: 10px 20px;
 	font-size: 15pt;
 	font-weight: bold;

@@ -1,3 +1,15 @@
+/* 
+
+Colours used are:
+
+Dark/Header        : <%= dark_colour %>
+Light/Tabs/links   : <%= light_colour %>
+Highlight/Headings : <%= highlight_colour %>
+
+Search and replace these values to change them after installation
+
+*/
+
 /* ***************** GENERAL DEFINITIONS ***************** */
 
 html, body {
@@ -11,7 +23,7 @@ html, body {
 }
 
 a {
-	color: #0849c6;
+	color: <%= light_colour %>;
 	text-decoration: none;
 }
 
@@ -94,7 +106,7 @@ a.awesome:hover {
 /* ***************** HEADER ***************** */
 
 div#header {
-	background-color: #31580f;
+	background-color: <%= dark_colour %>;
 	height: 92px;
 	padding: 2px 2px 0px 2px;
 	position: relative;
@@ -123,7 +135,7 @@ div#header h1 {
 }
 
 div#header h1 span {
-	color: #d8eefd;
+	color: <%= highlight_colour %>;
 	font-size: 80%;
 }
 
@@ -139,14 +151,14 @@ div#header ul#navigation {
 
 div#header ul#navigation li {
 	display: inline-block;
-	background-color: #427418;
+	background-color: <%= light_colour %>;
 }
 
 div#header ul#navigation li a {
 	text-decoration: none;
 	display: inline-block;
 	padding: 4px;
-	color: #d8eefd;
+	color: <%= highlight_colour %>;
 	font-weight: bold;
 }
 
@@ -169,16 +181,16 @@ div#header ul#subnavigation {
 
 div#header ul#subnavigation li {
 	display: inline-block;
-	background-color: #427418;
+	background-color: <%= light_colour %>;
 }
 
 div#header ul#subnavigation li a {
 	text-decoration: none;
 	display: inline-block;
 	padding: 3px;
-	color: #d8eefd;
+	color: <%= highlight_colour %>;
 	font-weight: bold;
-	font-size: 95%;
+	font-size: 90%;
 }
 
 div#header ul#subnavigation li.active a, div#header ul#subnavigation li a:hover {
@@ -197,7 +209,7 @@ div#sidebar {
 }
 
 div#sidebar h2 {
-	background-color: #eff4fd;
+	background-color: <%= highlight_colour %>;
 	padding: 8px;
 	color: black;
 	font-weight: bold;
@@ -206,7 +218,7 @@ div#sidebar h2 {
 
 div#sidebar p {
 	padding: 8px 8px 0px 8px;
-	color: black;
+	color: #333;
 }
 
 /* ***************** CONTENT ***************** */
@@ -226,7 +238,7 @@ div#content {
 
 div#content h1 {
 	margin: -20px -20px 20px -20px;
-	background: #eff4fd;
+	background: <%= highlight_colour %>;
 	padding: 10px 20px;
 	font-size: 15pt;
 	font-weight: bold;
