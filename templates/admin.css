@@ -101,6 +101,19 @@ div#header {
 	text-align: left;
 }
 
+div#header div#logged_in_summary {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	color: white;
+	font-size: 80%;
+}
+
+div#header div#logged_in_summary strong {
+	font-weight: bold;
+	font-size: 100%;
+}
+
 div#header h1 {
 	font-size: 18pt;
 	color: white;

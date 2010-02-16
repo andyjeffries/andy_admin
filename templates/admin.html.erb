@@ -10,6 +10,14 @@
 	</head>
 	<body>
 		<div id="header">
+			<%% if @current_user_name %>
+				<div id='logged_in_summary'>
+					Logged in as <strong><%%= @current_user_name %></strong>
+					<%% if @current_user_name %>
+						<br />Last login at <strong><%%= @last_login_time %></strong>
+					<%% end %>
+				</div>
+			<%% end %>
 			<h1><%= admin_name %> <span><%%= @page_title %></h1>
 			<ul id='navigation'>
 				<li class='active'><a href='#'>Type 1</a></li>

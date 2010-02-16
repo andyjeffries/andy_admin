@@ -22,6 +22,8 @@ h2. Header/Page Titles
 
 You should try to set the instance variable @page_title within your controller as the section of the site you're using, or maybe any section heading.  This is displayed in the main title tag and in the header bar.
 
+If you declare an instance variable of @current_user_name (and optionally one of @last_login_time) these values will be displayed in the top right of the header bar.
+
 h2. Navigation
 
 The navigation tabs are simply declared as ul#navigation and ul#subnavigation within the div#header element.  If they have a class of active they will be displayed as seamless to the page (to show the current tab).  For example:
