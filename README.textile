@@ -65,7 +65,7 @@ For example:
   </div>
   <div class='input'>
     <input type='text'>
-  </div></pre></code>
+  </div></code></pre>
 
 The actions buttons should be within a div.actions at the bottom of the form and can be normal links, links with a class of awesome ("Yes, it uses 'Awesome Buttons'":http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba) or buttons.
 
@@ -89,7 +89,7 @@ To use the sidebar, simply define content for :sidebar and use h2 tags for the h
 	     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
 	     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   	<p><a href='#'>I understand - delete</a></p>
-  <% end %></pre></code>
+  <% end %></code></pre>
 
 h2. To Do List
 
