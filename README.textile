@@ -76,7 +76,7 @@ Then each item is in a div.item.  An optional div.summary is available for sendi
 
 h2. Forms
 
-The general structure is to use h2 for field labels.  If there is an error you can immediately follow it with a span.error to display the error message continued on the same line.
+The general markup structure is to use h2 for field labels.  If there is an error you can immediately follow it with a span.error to display the error message continued on the same line.
 
 Then there can be an optional div.description for any helpful hints/descriptive text.
 
@@ -103,7 +103,16 @@ For example:
     or <a href='#'>Cancel</a>
   </div></code></pre>
 
-For the moment there's no easy way of generating these forms, but a custom FormBuilder is planned.
+If you prefer to use Rails' built in form generation (and let's be honest, who doesn't) there is a custom Form Builder available to generate compliant forms very easily:
+
+<pre><code>  <% form_for @website, :builder => AndyAdmin::FormBuilder, :url => '/' do |f| %>
+    <%= f.text_field :name, :description => "Use the site's full name" %>
+    <%= f.text_area :content, :title => "Rich content" %>
+    <%= f.date_select :launched_at %>
+    <%= f.check_box :live, :label => "Yes, I want the site to be live" %>
+    <%= f.submit "Update", :colour => "blue" %> or
+    <%= f.cancel "Cancel", "/" %>
+  <% end %></code></pre>
 
 h2. Sidebar
 
@@ -116,7 +125,3 @@ To use the sidebar, simply define content for :sidebar and use h2 tags for the h
 	     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   	<p><a href='#'>I understand - delete</a></p>
   <% end %></code></pre>
-
-h2. To Do List
-
-* Create a custom FormBuilder (AndyAdmin::FormBuilder)
