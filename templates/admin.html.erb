@@ -20,13 +20,14 @@
 			<%% end %>
 			<h1><%= admin_name %> <span><%%= @page_title %></h1>
 			<ul id='navigation'>
-				<li class='active'><a href='#'>Type 1</a></li>
-				<li><a href='#'>Type 2</a></li>
-				<li><a href='#'>Type 3</a></li>
+				<% ANDY_ADMIN_MENU.main_items_each(@current_section_id) do |name, link, section_id, css_class| %>
+					<li class='<%= css_class %>'><a href='<%= link %>' id='<%= section_id %>'><%= name %></a></li>
+				<% end %>
 			</ul>
 			<ul id='subnavigation'>
-				<li><a href='#'>Type 3</a></li>
-				<li><a href='#'>Type 3</a></li>
+				<% ANDY_ADMIN_MENU.sub_items_each(@current_section_id) do |name, link, section_id, css_class| %>
+					<li class='<%= css_class %>'><a href='<%= link %>' id='<%= section_id %>'><%= name %></a></li>
+				<% end %>
 			</ul>
 		</div>
 		<%%= content_tag(:div, "<span>close</span>" + flash[:notice], :class => "flash_notice") if flash[:notice] %>
