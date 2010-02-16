@@ -90,3 +90,10 @@ To use the sidebar, simply define content for :sidebar and use h2 tags for the h
 	     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   	<p><a href='#'>I understand - delete</a></p>
   <% end %></pre></code>
+
+h2. To Do List
+
+* Create a custom FormBuilder (AndyAdmin::FormBuilder)
+* Navigation class for handling the current Tab (AndyAdmin::Navigation)
+* Create a login layout too
+* Flash error/notice/warning displays in layouts (admin and login)
