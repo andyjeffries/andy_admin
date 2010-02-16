@@ -38,7 +38,17 @@ The navigation tabs are simply declared as ul#navigation and ul#subnavigation wi
     <li><a href='#'>Type 3</a></li>
   </ul></code></pre>
 
-For the moment, there's no automated handling of determining the current tab, but this is planned.
+However, the generation of these items is handled by a builder method in config/initializers/andy_admin_menu.rb and looks like this:
+
+<pre><code>  ANDY_ADMIN_MENU = AndyAdmin::Menu.build do
+    main :test1, "Test 1", '/'
+    main :test2, "Test 2", '#'
+    main :test3, "Test 3", "/"
+    sub :test4, "Test 4 S"
+    sub :logout, "Logout"
+  end</code></pre>
+
+The AndyAdmin::Menu class is capable of iterating over it's elements and displaying the active tab (when passed the id of the current tab) as such.
 
 h2. Main Content Area
 
@@ -110,4 +120,3 @@ To use the sidebar, simply define content for :sidebar and use h2 tags for the h
 h2. To Do List
 
 * Create a custom FormBuilder (AndyAdmin::FormBuilder)
-* Navigation class for handling the current Tab (AndyAdmin::Navigation)

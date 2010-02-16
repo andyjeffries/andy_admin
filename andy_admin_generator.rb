@@ -15,6 +15,9 @@ class AndyAdminGenerator < Rails::Generator::Base
       m.template "login.html.erb", "app/views/layouts/login.html.erb"
       m.file "login.css", "public/stylesheets/login.css"
       m.file "login.js", "public/javascripts/login.js"
+      m.file "andy_admin_menu.rb", "config/initializers/andy_admin_menu.rb"
+      m.make_directory "lib/andy_admin"
+      m.file "menu.rb", "lib/andy_admin/menu.rb"
     end
   end
 end
