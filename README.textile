@@ -33,7 +33,7 @@ For example:
 <pre><code>  <h1>
     Overview 
     <span><a href='#'>Add new</a> | <a href='#'>Search</a></span>
-  </h1></pre></code>
+  </h1></code></pre>
 
 If you're listing items, the easiest way is to follow 37 Signal's example and break them out by date using div.date_breakout, for example:
 
@@ -75,7 +75,7 @@ For example:
     <button class='awesome green' type='submit'>Save</button>
     <a href='#foo' class='awesome red'>Delete</a>
     or <a href='#'>Cancel</a>
-  </div></pre></code>
+  </div></code></pre>
 
 For the moment there's no easy way of generating these forms, but a custom FormBuilder is planned.
 
@@ -85,6 +85,8 @@ To use the sidebar, simply define content for :sidebar and use h2 tags for the h
 
 <pre><code>  <% content_for :sidebar do %>
   	<h2>Should we delete it?</h2>
-  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+	     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+	     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   	<p><a href='#'>I understand - delete</a></p>
   <% end %></pre></code>
