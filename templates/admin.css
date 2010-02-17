@@ -301,7 +301,14 @@ form h2 {
 }
 
 form span.error {
-	color: red;
+	color: #b72c23;
+}
+
+form div.formError {
+	color: #b72c23;
+	display: inline;
+	margin-left: 0.5em;
+	font-size: 110%;
 }
 
 form div.description {
@@ -312,6 +319,12 @@ form div.input {
 	background-color: #f0f0f0;
 	padding: 6px;
 	margin-bottom: 20px;
+}
+
+form div.fieldWithErrors {
+	background-color: #b72c23;
+	margin: -6px;
+	padding: 6px;
 }
 
 form textarea {
