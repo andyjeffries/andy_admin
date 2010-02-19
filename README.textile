@@ -131,3 +131,5 @@ To use the sidebar, simply define content for :sidebar and use h2 tags for the h
 	     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   	<p><a href='#'>I understand - delete</a></p>
   <% end %></code></pre>
+
+If you prefer you can wrap each item in a div.card which will style it similar to the main body content - white background, drop shadow - but slightly lower to the page.
