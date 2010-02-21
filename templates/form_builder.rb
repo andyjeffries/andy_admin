@@ -19,6 +19,8 @@ class AndyAdmin::FormBuilder < ActionView::Helpers::FormBuilder
       if name == "check_box"
         label = label(field_name, options[:label])
         input = @template.content_tag(:div, super(field_name, options) + " " + label, :class => 'input')
+      elsif name == "select"
+        input = @template.content_tag(:div, super(field_name, args[0], options), :class => 'input')
       else
         input = @template.content_tag(:div, super(field_name, options), :class => 'input')
       end

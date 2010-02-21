@@ -69,6 +69,10 @@ If you're listing items, the easiest way is to follow 37 Signal's example and br
 
 <pre><code>  <div class='date_breakout'>Friday, 12 July 2009</div></code></pre>
 
+This is easily done with the date_breakout helper provided with the generator:
+
+<pre><code>  date_breakout(item.created_at)</code></pre>
+
 Then each item is in a div.item.  An optional div.summary is available for sending less important information to the right:
 
 <pre><code>  <div class='item'>
@@ -119,6 +123,10 @@ If you prefer to use Rails' built in form generation (and let's be honest, who d
   <% end %></code></pre>
 
 The title is the h2 tag used to title the input, the description is the hint text that appears above the input and the label is used after checkboxes.  It automatically handles displaying of errors.
+
+As another little nicety, if you give a link a class of 'link_to_site' it will appear as a block element with a grey background/border.  This is sometimes useful when providing a link to view the item in the context of the main site:
+
+<pre><code>  <%= link_to "&#10148; View this news item on the main site", news_path(@news_item), :class => "link_to_site" %></code></pre>
 
 h2. Sidebar
 

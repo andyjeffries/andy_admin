@@ -20,6 +20,7 @@ class AndyAdminGenerator < Rails::Generator::Base
       m.template "login.css", "public/stylesheets/login.css"
       m.file "login.js", "public/javascripts/login.js"
       m.file "andy_admin_menu.rb", "config/initializers/andy_admin_menu.rb"
+      m.file "andy_admin_helper.rb", "app/helpers/andy_admin_menu.rb"
       m.directory "lib/andy_admin"
       m.file "menu.rb", "lib/andy_admin/menu.rb"
       m.file "form_builder.rb", "lib/andy_admin/form_builder.rb"
