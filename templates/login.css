@@ -23,7 +23,6 @@ a:hover {
 
 div.flash_error, div.flash_notice, div.flash_warning {
 	margin: -20px -20px 20px -20px;
-	margin: 0px 0px 20px 0px;
 	padding: 10px;
 	color: white;
 	font-weight: bold;

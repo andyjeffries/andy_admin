@@ -2,6 +2,7 @@
 
 Colours used are:
 
+Hue                : <%= hue %>
 Dark/Header        : <%= dark_colour %>
 Light/Tabs/links   : <%= light_colour %>
 Highlight/Headings : <%= highlight_colour %>

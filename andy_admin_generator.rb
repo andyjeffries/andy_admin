@@ -1,5 +1,5 @@
 class AndyAdminGenerator < Rails::Generator::Base
-  attr_accessor :admin_name, :dark_colour, :light_colour, :highlight_colour
+  attr_accessor :admin_name, :dark_colour, :light_colour, :highlight_colour, :hue
   
   def initialize(runtime_args, runtime_options = {})
     super
