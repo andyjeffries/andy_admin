@@ -18,7 +18,7 @@ h2. Login Layout
 
 The login layout (login.html.erb) is really a layout and view in one, the first step will need to be extracting the form within the layout in to a view and making the yield call uncommented.  Then you can use it for a login form.  It will look something like this:
 
-!http://cloud.github.com/downloads/andyjeffries/andy_admin/Screen_shot_2010-04-07_at_15.48.51.png!
+!http://cloud.github.com/downloads/andyjeffries/andy_admin/login_sample.png!
 
 h2. Flash Messages
 
@@ -100,7 +100,7 @@ If you prefer you can wrap each item in a div.card which will style it similar t
 
 Once you've created your main content area and sidebars, they should looks something like this...
 
-!http://cloud.github.com/downloads/andyjeffries/andy_admin/Screen_shot_2010-04-07_at_16.00.58.png!
+!http://cloud.github.com/downloads/andyjeffries/andy_admin/index_sample.png!
 
 h2. Forms
 
@@ -146,7 +146,7 @@ The title is the h2 tag used to title the input, the description is the hint tex
 
 It will look something like this:
 
-!http://cloud.github.com/downloads/andyjeffries/andy_admin/Screen_shot_2010-04-07_at_16.06.48.png!
+!http://cloud.github.com/downloads/andyjeffries/andy_admin/form_sample.png!
 
 As another little nicety, if you give a link a class of 'link_to_site' it will appear as a block element with a grey background/border.  This is sometimes useful when providing a link to view the item in the context of the main site:
 
