@@ -13,7 +13,7 @@
 			<%% if @current_user_name %>
 				<div id='logged_in_summary'>
 					Logged in as <strong><%%= @current_user_name %></strong>
-					<%% if @current_user_name %>
+					<%% if @last_login_time %>
 						<br />Last login at <strong><%%= @last_login_time %></strong>
 					<%% end %>
 				</div>

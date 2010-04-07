@@ -16,7 +16,9 @@ This will create the admin and login layouts, all javascript/css files and copy 
 
 h2. Login Layout
 
-The login layout (login.html.erb) is really a layout and view in one, the first step will need to be extracting the form within the layout in to a view and making the yield call uncommented.  Then you can use it for a login form.
+The login layout (login.html.erb) is really a layout and view in one, the first step will need to be extracting the form within the layout in to a view and making the yield call uncommented.  Then you can use it for a login form.  It will look something like this:
+
+!http://cloud.github.com/downloads/andyjeffries/andy_admin/Screen_shot_2010-04-07_at_15.48.51.png!
 
 h2. Flash Messages
 
@@ -52,7 +54,7 @@ However, the generation of these items is handled by a builder method in config/
     sub :logout, "Logout"
   end</code></pre>
 
-The AndyAdmin::Menu class is capable of iterating over it's elements and displaying the active tab (when passed the id of the current tab) as such.
+The AndyAdmin::Menu class is capable of iterating over it's elements and displaying the active tab (when passed the symbol of the current tab as @current_section_id) as such.
 
 h2. Main Content Area
 
@@ -81,6 +83,24 @@ Then each item is in a div.item.  An optional div.summary is available for sendi
     </div>
     <a href='#'>Test item</a>
   </div></code></pre>
+
+h2. Sidebar
+
+To use the sidebar, simply define content for :sidebar and use h2 tags for the headings.  For example:
+
+<pre><code>  <% content_for :sidebar do %>
+  	<h2>Should we delete it?</h2>
+  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+	     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+	     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  	<p><a href='#'>I understand - delete</a></p>
+  <% end %></code></pre>
+
+If you prefer you can wrap each item in a div.card which will style it similar to the main body content - white background, drop shadow - but slightly lower to the page.
+
+Once you've created your main content area and sidebars, they should looks something like this...
+
+!http://cloud.github.com/downloads/andyjeffries/andy_admin/Screen_shot_2010-04-07_at_16.00.58.png!
 
 h2. Forms
 
@@ -124,20 +144,11 @@ If you prefer to use Rails' built in form generation (and let's be honest, who d
 
 The title is the h2 tag used to title the input, the description is the hint text that appears above the input and the label is used after checkboxes.  It automatically handles displaying of errors.
 
+It will look something like this:
+
+!http://cloud.github.com/downloads/andyjeffries/andy_admin/Screen_shot_2010-04-07_at_16.06.48.png!
+
 As another little nicety, if you give a link a class of 'link_to_site' it will appear as a block element with a grey background/border.  This is sometimes useful when providing a link to view the item in the context of the main site:
 
 <pre><code>  <%= link_to "&#10148; View this news item on the main site", news_path(@news_item), :class => "link_to_site" %></code></pre>
 
-h2. Sidebar
-
-To use the sidebar, simply define content for :sidebar and use h2 tags for the headings.  For example:
-
-<pre><code>  <% content_for :sidebar do %>
-  	<h2>Should we delete it?</h2>
-  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-	     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-	     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  	<p><a href='#'>I understand - delete</a></p>
-  <% end %></code></pre>
-
-If you prefer you can wrap each item in a div.card which will style it similar to the main body content - white background, drop shadow - but slightly lower to the page.
