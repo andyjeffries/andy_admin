@@ -6,21 +6,21 @@ h2. Usage
 
 This generator is now Rails 3 only and gem-based.  If you want to use the Rails 2 version you should do the following to install the Rails 2 branch in the older way:
 
-git clone git://github.com/andyjeffries/andy_admin.git ~/.rails/generators/andy_admin
+<pre><code>git clone git://github.com/andyjeffries/andy_admin.git ~/.rails/generators/andy_admin
 cd ~/.rails/generators/andy_admin
-git checkout -b rails2 origin/rails2
+git checkout -b rails2 origin/rails2</code></pre>
 
 Assuming you're using Rails 3, you simply need to install the gem on your system:
 
-gem install andy_admin
+<pre><code>gem install andy_admin</code></pre>
 
 and then add it to your Gemfile in your application:
 
-gem "andy_admin"
+<pre><code>gem "andy_admin"</code></pre>
 
 To add this admin layout to your application is easy:
 
-rails generate andy_admin "My Site Name" 232
+<pre><code>rails generate andy_admin "My Site Name" 232</code></pre>
 
 This will create the admin and login layouts, all javascript/css files and copy in any necessary images and using a hue of 232 degrees (with the saturation and lightness values automatically calculated).
 
