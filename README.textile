@@ -4,7 +4,13 @@ h2. About
 
 h2. Usage
 
-To use this gem in Rails 3, you need to install the gem on your system:
+This generator is now Rails 3 only and gem-based.  If you want to use the Rails 2 version you should do the following to install the Rails 2 branch in the older way:
+
+git clone git://github.com/andyjeffries/andy_admin.git ~/.rails/generators/andy_admin
+cd ~/.rails/generators/andy_admin
+git checkout -b rails2 origin/rails2
+
+Assuming you're using Rails 3, you simply need to install the gem on your system:
 
 gem install andy_admin
 
