@@ -4,13 +4,17 @@ h2. About
 
 h2. Usage
 
-First you need to clone this repository to your ~/.rails/generators folder like this:
+To use this gem in Rails 3, you need to install the gem on your system:
 
-git clone git://github.com/andyjeffries/andy_admin.git ~/.rails/generators/andy_admin
+gem install andy_admin
+
+and then add it to your Gemfile in your application:
+
+gem "andy_admin"
 
 To add this admin layout to your application is easy:
 
-script/generate andy_admin "My Site Name" 232
+rails generate andy_admin "My Site Name" 232
 
 This will create the admin and login layouts, all javascript/css files and copy in any necessary images and using a hue of 232 degrees (with the saturation and lightness values automatically calculated).
 
