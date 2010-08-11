@@ -2,7 +2,7 @@
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 	<head>
-		<title>Login : <%= admin_name %></title>
+		<title>Login : <%= name %></title>
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.0/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css">
 		<%%= javascript_include_tag 'login' %>
@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div id="login">
-			<h1><%= admin_name %></h1>
+			<h1><%= name %></h1>
 			<%%= content_tag(:div, flash[:notice], :class => "flash_notice") if flash[:notice] %>
 			<%%= content_tag(:div, flash[:error], :class => "flash_error") if flash[:error] %>
 			<%%= content_tag(:div, flash[:warning], :class => "flash_warning") if flash[:warning] %>
