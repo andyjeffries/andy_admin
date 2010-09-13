@@ -2,7 +2,7 @@ require 'rails/generators'
 
 class AndyAdminGenerator < Rails::Generators::Base
   argument :name, :type => :string, :banner => "name of your site", :default => "Your Site"
-  argument :hue, :type => :numeric, :banner => "colour hue, 0-255", :default => 92
+  argument :hue, :type => :numeric, :banner => "colour hue, 0-359", :default => 92
   
   source_root File.expand_path("templates", File.dirname(__FILE__))
   
