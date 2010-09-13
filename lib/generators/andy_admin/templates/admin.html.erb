@@ -30,9 +30,9 @@
 				<%% end %>
 			</ul>
 		</div>
-		<%%= content_tag(:div, "<span>close</span>" + flash[:notice], :class => "flash_notice") if flash[:notice] %>
-		<%%= content_tag(:div, "<span>close</span>" + flash[:error], :class => "flash_error") if flash[:error] %>
-		<%%= content_tag(:div, "<span>close</span>" + flash[:warning], :class => "flash_warning") if flash[:warning] %>
+		<%%= content_tag(:div, "<span>close</span>".html_safe + flash[:notice], :class => "flash_notice") if flash[:notice] %>
+		<%%= content_tag(:div, "<span>close</span>".html_safe + flash[:error], :class => "flash_error") if flash[:error] %>
+		<%%= content_tag(:div, "<span>close</span>".html_safe + flash[:warning], :class => "flash_warning") if flash[:warning] %>
 		<div id='sidebar'>
 			<%%= yield(:sidebar) %>
 		</div>
