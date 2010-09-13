@@ -4,7 +4,7 @@ module AndyAdminHelper
   	date = value.strftime("%A, %e %B %Y")
   	if date != @last_date
   	  @last_date = date
-  	  "<div class='date_breakout'>#{date}</div>"
+  	  "<div class='date_breakout'>#{date}</div>".html_safe
   	end
   end
 end

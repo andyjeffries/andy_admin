@@ -8,13 +8,14 @@ class AndyAdmin::FormBuilder < ActionView::Helpers::FormBuilder
     define_method(name) do |field_name, *args|
       options = args.extract_options!
       options[:title] ||= field_name.to_s.humanize
-      heading = "<h2>" + options[:title] + "</h2>"
+      heading = ("<h2>" + options[:title] + "</h2>").html_safe
       heading += error_message_on(field_name, args)
       description = if options[:description]
-        @template.content_tag(:div, options[:description], :class => "description") 
+        @template.content_tag(:div, options[:description].html_safe, :class => "description") 
       else
-        ""
+        "".html_safe
       end
+      input = "".html_safe
       options.merge!({:class => name})
       if name == "check_box"
         label = label(field_name, options[:label])
@@ -29,16 +30,16 @@ class AndyAdmin::FormBuilder < ActionView::Helpers::FormBuilder
   end
   
   def actions
-    @template.concat @template.content_tag(:div, yield, :class => "actions")
+    @template.concat @template.content_tag(:div, yield.html_safe, :class => "actions")
   end
   
   def submit(label, *args)
     options = args.extract_options!
     options[:colour] ||= "green"
-    @template.content_tag(:button, label, :class => "awesome #{options[:colour]}", :type => "submit")
+    @template.content_tag(:button, label.html_safe, :class => "awesome #{options[:colour]}", :type => "submit")
   end
   
   def cancel(label, link)
-    @template.content_tag(:a, label, :href => link)
+    @template.content_tag(:a, label.html_safe, :href => link)
   end
 end
