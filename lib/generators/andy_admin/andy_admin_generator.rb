@@ -27,6 +27,10 @@ class AndyAdminGenerator < Rails::Generators::Base
     hsvToRGB(hue, 0.83, 0.35)
   end
   
+  def dark_colour_gradient
+    hsvToRGB(hue, 0.84, 0.35)
+  end
+  
   def light_colour
     hsvToRGB(hue, 0.79, 0.50)
   end
